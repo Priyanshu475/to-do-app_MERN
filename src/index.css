@@ -1,0 +1,367 @@
+html {
+	min-height: 100%;
+}
+body {
+	min-height: 100%;
+	height: 100%;
+	font-family: Bad Script;
+	background: #cfcdab;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to bottom,
+		#cfcdab,
+		#cfcdab,
+		#cfcdab,
+		#d6ae31,
+		#c79b27,
+		#c79b27
+	);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		#cfcdab,
+		#cfcdab,
+		#cfcdab,
+		#d6ae31,
+		#c79b27,
+		#c79b27
+	);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.app__title {
+	margin-top: 65px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+.todo {
+	margin: 0 auto;
+  margin-top: 20px;
+	margin-bottom: 40px;
+	box-shadow: 0 0 1em black;
+	max-width: 700px;
+	height: 100%;
+	background: white;
+	position: relative;
+}
+.todo__title {
+	text-transform: uppercase;
+	background:greenyellow;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	font-weight: normal;
+}
+.todo__input {
+	background: white;
+	width: 100%;
+	box-sizing: border-box;
+	height: 50px;
+	font-size: 20px;
+	font-weight: 0.5px;
+	padding: 25px 25px;
+	border: none;
+	border-bottom: 3px solid gray;
+	color: gray;
+	outline: none;
+}
+.todo__input:hover,
+.todo__input:focus {
+	border-bottom-color: #86a8e7;
+}
+.todo__list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.todo__list-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #f7f7f7;
+	padding: 15px 15px;
+	font-size: 20px;
+  margin: auto;
+  height: fit-content;
+}
+.todo__list-item:hover {
+	background: #edf1f5;
+}
+.todo__list-item-text {
+	padding: 5px;
+  max-width: 500px;
+  word-break: break-all;
+}
+.todo__list-item-text-1 {
+	padding: 5px;
+  max-width: 500px;
+  word-break: break-all;
+}
+.todo__list-item-trash {
+	border-radius: 6px;
+	width: 35px;
+	height: 35px;
+	opacity: 1;
+	font-size: 14px;
+  background-image: url("data:image/png;base64,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");
+  background-size: cover;
+}
+.todo__list-item-trash-icon {
+	line-height: 35px;
+}
+.todo__list-item-trash:hover,
+.todo__list-item-trash:focus {
+	cursor: pointer;
+	border-color: #86a8e7;
+	outline: none;
+}
+.todo__list-item-trash:hover .todo__list-item-trash-icon,
+.todo__list-item-trash:focus .todo__list-item-trash-icon {
+	color: #86a8e7;
+}
+
+body{
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.abc{
+  border: black 1px solid;
+  padding: auto;
+  margin: auto;
+}
+.nav {
+  width: 100%;
+  background-color: #1A237E;
+  display: flex;
+  align-items: center;
+}
+.nav > .nav-header {
+  flex: 0.95;
+  padding-left: 1rem;
+}
+.nav > .nav-header > .nav-title {
+  font-size: 22px;
+  color: #fff;
+  margin-right: 1000px;
+}
+.nav > .nav-list {
+  display: flex;
+  gap: 2rem;
+}
+.nav > .nav-list > li {
+  list-style-type: none;
+}
+.nav > .nav-list > li a {
+  text-decoration: none;
+  color: #efefef;
+  cursor: pointer;
+}
+.nav > #nav-check {
+    display: none;
+}
+@media (max-width: 480px) {
+  .nav {
+    padding: 1rem;
+  }
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 0.2rem;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    background-color: #1A237E;
+    height: 0;
+    transition: all 0.3s ease-in;
+    top: 40px;
+    left: 0;
+    overflow: hidden;
+  }
+  .nav > .nav-list > li {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  .nav > #nav-check:checked ~ .nav-list {
+    height: calc(100vh - 50px);
+  }
+}
+
+
+
+.linkn{
+  text-decoration: none;
+  color: #efefef;
+  cursor: pointer;
+}
+
+
+form {
+  margin-top: 300px;
+  margin-left:auto;
+  margin-right:auto;
+  width: 343px;
+  height: 450px;
+  padding:30px;
+  border: 1px solid rgba(0,0,0,.2);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: rgba(0, 0, 0, 0.5); 
+  -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+  box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+  overflow: hidden; 
+}
+
+textarea{
+  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px; 
+  width: 276px;
+  height: 110px;
+  border: 1px solid rgba(255,255,255,.6);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; 
+  display:block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:18px;
+  color:#fff;
+  padding-left:45px;
+  padding-right:20px;
+  padding-top:12px;
+  margin-bottom:20px;
+  overflow:hidden;
+}
+
+input {
+  width: 276px;
+  height: 48px;
+  border: 1px solid rgba(255,255,255,.4);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; 
+  display:block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:18px;
+  color:#fff;
+  padding-left:20px;
+  padding-right:20px;
+  margin-bottom:20px;
+}
+
+.email{
+  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_email.png) no-repeat scroll 16px 20px;
+  padding-left:45px;
+  width: 276px;
+  height: 48px;
+  border: 1px solid rgba(255,255,255,.4);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; 
+  display:block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:18px;
+  color:#fff;
+  padding-left:20px;
+  padding-right:20px;
+  margin-bottom:20px;
+}
+
+input[type=submit] {
+  cursor:pointer;
+}
+
+input.name {
+  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_name.png) no-repeat scroll 16px 16px; 
+  padding-left:45px;
+  
+}
+
+.email {
+  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_email.png) no-repeat scroll 16px 20px;
+  padding-left:45px;
+  width: 276px;
+  height: 48px;
+  border: 1px solid rgba(255,255,255,.4);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; 
+  display:block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:18px;
+  color:#fff;
+  padding-left:20px;
+  padding-right:20px;
+  margin-bottom:20px;
+}
+
+input.message {
+  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
+  padding-left:45px;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-moz-placeholder{ 
+  color: #fff; 
+}
+
+::-moz-placeholder {
+  color: #fff;
+}
+
+:-ms-input-placeholder {  
+  color: #fff; 
+}
+
+input:focus, textarea:focus { 
+  background-color: rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+  -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+  box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+  overflow: hidden; 
+}
+
+
+
+label{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:18px;
+  color:#fff;
+}
